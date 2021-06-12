@@ -2,7 +2,7 @@ import './App.css';
 import FacebookLink from './Facebooklink';
 
 function App() {
-  return <FacebookLink />;
+  return <h1></h1>;
 }
 
 export default App;

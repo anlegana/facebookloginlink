@@ -8,8 +8,10 @@ export default class Facebooklink extends Component {
     name: '',
     email: '',
     picture: '',
+    //posts: '',
   };
   responseFacebook = (response) => {
+    console.log(response);
     this.setState({
       isLoggedIn: true,
       userId: response.userId,
@@ -42,6 +44,7 @@ export default class Facebooklink extends Component {
           appId='594228104887812'
           autoLoad={true}
           fields='name,email,picture'
+          scope='public_profile,user_friends,user_actions.books'
           onClick={this.componentClicked}
           callback={this.responseFacebook}
         />
